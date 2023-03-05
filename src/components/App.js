@@ -4,7 +4,7 @@ import '../styles/App.css';
 class Odd extends React.Component {
 
   render() {
-    console.log("Even is unmounted");
+//     console.log("Even is unmounted");
     return (
       <div id="odd">
         I am odd
@@ -16,7 +16,7 @@ class Odd extends React.Component {
 class Even extends React.Component {
 
   render() {
-    console.log("Odd is unmounted");
+//     console.log("Odd is unmounted");
     return (
       <div id="even">
         I am even
@@ -26,7 +26,8 @@ class Even extends React.Component {
 }
 class App extends React.Component {
   handleChange(){
-    this.setState({even: !this.state.even})
+    this.setState({even: !this.state.even});
+    this.state.even? console.log("Even is unmounted"): console.log("Odd is unmounted")
   }
   constructor(props){
     super(props)
